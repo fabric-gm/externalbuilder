@@ -7,7 +7,7 @@ COPY cmd/ cmd/
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO111MODULE=on go build -a -o fileserver ./cmd/fileserver/fileserver.go
 
 
-FROM alpine:20200917
+FROM ubuntu:20.04
 
 COPY --from=builder /workspace/fileserver .
 
