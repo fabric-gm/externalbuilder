@@ -7,7 +7,7 @@ COPY cmd/ cmd/
 RUN CGO_ENABLED=0 go build -o launcher ./cmd/launcher
 
 
-FROM hyperledger/fabric-peer:2.5.1
+FROM ghcr.io/fabric-gm/fabric-peer:2.5.1
 RUN mkdir -p /builders/golang/bin
 
 COPY --from=builder /workspace/launcher  /builders/golang/bin/externalcc
