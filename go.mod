@@ -14,7 +14,6 @@ require (
 	github.com/hyperledger/fabric v2.1.1+incompatible
 	github.com/hyperledger/fabric-amcl v0.0.0-20200424173818-327c9e2cf77a // indirect
 	github.com/hyperledger/fabric-protos-go v0.0.0-20200923192742-3897341ac036
-	github.com/lithammer/shortuuid/v3 v3.0.4
 	github.com/mholt/archiver v3.1.1+incompatible
 	github.com/miekg/pkcs11 v1.0.3 // indirect
 	github.com/nwaples/rardecode v1.1.0 // indirect
