@@ -19,7 +19,7 @@ require (
 	github.com/nwaples/rardecode v1.1.0 // indirect
 	github.com/otiai10/copy v1.2.0
 	github.com/pkg/errors v0.9.1
-	github.com/spf13/viper v1.7.1 // indirect
+	github.com/spf13/viper v1.7.1
 	github.com/stretchr/testify v1.6.1
 	github.com/sykesm/zap-logfmt v0.0.4 // indirect
 	github.com/ulikunitz/xz v0.5.8 // indirect

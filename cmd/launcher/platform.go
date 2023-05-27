@@ -6,12 +6,20 @@ import (
 
 	pb "github.com/hyperledger/fabric-protos-go/peer"
 	"github.com/hyperledger/fabric/core/chaincode/platforms"
+	"github.com/hyperledger/fabric/core/chaincode/platforms/java"
+	"github.com/hyperledger/fabric/core/chaincode/platforms/node"
 	"github.com/hyperledger/fabric/core/container/dockercontroller"
 )
 
+var supportedPlatforms = []platforms.Platform{
+	&GolangPlatform{},
+	&java.Platform{},
+	&node.Platform{},
+}
+
 // GetPlatform returns the chaincode platform as defined by HyperLedger Fabric Peer
 func GetPlatform(ccType string) platforms.Platform {
-	for _, plt := range platforms.SupportedPlatforms {
+	for _, plt := range supportedPlatforms {
 		if plt.Name() == strings.ToUpper(ccType) {
 			return plt
 		}
