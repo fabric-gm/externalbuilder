@@ -4,6 +4,7 @@ COPY go.mod go.mod
 COPY go.sum go.sum
 RUN go mod download
 COPY cmd/ cmd/
+RUN export GOPROXY=https://goproxy.io
 RUN CGO_ENABLED=0 go build -o launcher ./cmd/launcher
 
 
