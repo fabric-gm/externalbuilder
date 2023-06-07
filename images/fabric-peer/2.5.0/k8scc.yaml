@@ -1,6 +1,6 @@
 ---
 images:
-  golang: "hyperledger/fabric-ccenv:2.5.0"
+  golang: "hyperledger/fabric-ccenv:2.4.9"
   java: "hyperledger/fabric-javaenv:2.5.0"
   node: "hyperledger/fabric-nodeenv:2.5.0"
 
