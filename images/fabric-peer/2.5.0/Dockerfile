@@ -1,5 +1,6 @@
 FROM golang:1.15.2-alpine3.12 as builder
 WORKDIR /workspace
+ENV GOPROXY https://goproxy.cn
 COPY go.mod go.mod
 COPY go.sum go.sum
 RUN go mod download
@@ -7,7 +8,7 @@ COPY cmd/ cmd/
 RUN CGO_ENABLED=0 go build -o launcher ./cmd/launcher
 
 
-FROM ghcr.io/fabric-gm/fabric-peer:2.5.0-0.0.1
+FROM hyperledger/fabric-peer:2.5.0
 RUN mkdir -p /builders/golang/bin
 
 COPY --from=builder /workspace/launcher  /builders/golang/bin/externalcc
