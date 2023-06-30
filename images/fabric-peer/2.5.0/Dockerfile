@@ -3,8 +3,8 @@ WORKDIR /workspace
 ENV GOPROXY https://goproxy.cn
 COPY go.mod go.mod
 COPY go.sum go.sum
-RUN go mod download
 COPY cmd/ cmd/
+RUN go mod tidy
 RUN CGO_ENABLED=0 go build -o launcher ./cmd/launcher
 
 
