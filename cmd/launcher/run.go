@@ -177,7 +177,7 @@ func createChaincodePod(ctx context.Context, cfg Config, runConfig *ChaincodeRun
 	if runConfig.ClientCert == "" {
 		hasTLS = "false"
 	}
-	initImage := "dockerproxy.com/dviejo/fabric-init:amd64-2.2.0"
+	initImage := "dviejo/fabric-init:amd64-2.2.0"
 
 	// file server URL
 	fileServerURL := getFileServerURL()

@@ -1,8 +1,8 @@
 ---
 images:
-  golang: "ockerproxy.com/hyperledger/fabric-ccenv:2.4.9"
-  java: "ockerproxy.com/hyperledger/fabric-javaenv:2.5.1"
-  node: "ockerproxy.com/hyperledger/fabric-nodeenv:2.5.1"
+  golang: "hyperledger/fabric-ccenv:2.4.9"
+  java: "hyperledger/fabric-javaenv:2.5.1"
+  node: "hyperledger/fabric-nodeenv:2.5.1"
 
 builder:
   resources:
