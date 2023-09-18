@@ -1,9 +1,9 @@
 FROM easzlab.io.local:5000/golang:1.15.2-alpine3.12 as builder
 WORKDIR /workspace
-ENV GOPROXY https://goproxy.cn
 COPY go.mod go.mod
 COPY go.sum go.sum
 COPY cmd/ cmd/
+RUN go env -w GOPROXY=https://goproxy.cn
 RUN go mod tidy
 RUN CGO_ENABLED=0 go build -o launcher ./cmd/launcher
 
