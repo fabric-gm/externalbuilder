@@ -183,7 +183,7 @@ func createBuilderJob(ctx context.Context, cfg Config, metadata *ChaincodeMetada
 		return nil, fmt.Errorf("no builder image available for %q", metadata.Type)
 	}
 
-	initImage := "easzlab.io.local:5000/dviejo/fabric-init:amd64-2.2.0"
+	initImage := "dviejo/fabric-init:amd64-2.2.0"
 
 	// Get platform informations from hyperledger
 	plt := GetPlatform(metadata.Type)
