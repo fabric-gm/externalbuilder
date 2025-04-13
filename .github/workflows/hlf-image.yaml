@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - dev
     tags:
       - '*'
 
@@ -15,6 +16,7 @@ jobs:
         hlf-version:
 #          - "2.4.9"
           - "2.5.0"
+          - "3.1.0"
     steps:
       -
         name: Checkout code
