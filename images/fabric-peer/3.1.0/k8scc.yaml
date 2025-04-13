@@ -6,10 +6,10 @@ images:
 
 builder:
   resources:
-    memory_limit: "0.5G"
-    cpu_limit: "0.2"
+    memory_limit: "2G"
+    cpu_limit: "1"
   env: []
 launcher:
   resources:
-    memory_limit: "0.5G"
-    cpu_limit: "0.2"
+    memory_limit: "2G"
+    cpu_limit: "1"

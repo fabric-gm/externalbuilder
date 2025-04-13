@@ -6,18 +6,19 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	cpy "github.com/otiai10/copy"
-	"github.com/pkg/errors"
 	"io"
 	"io/ioutil"
-	apiv1 "k8s.io/api/core/v1"
-	"k8s.io/apimachinery/pkg/api/resource"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
+
+	cpy "github.com/otiai10/copy"
+	"github.com/pkg/errors"
+	apiv1 "k8s.io/api/core/v1"
+	"k8s.io/apimachinery/pkg/api/resource"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 // Build builds a chaincode on Kubernetes
